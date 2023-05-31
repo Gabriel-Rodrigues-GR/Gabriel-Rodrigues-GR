@@ -1,0 +1,41 @@
+main {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+main h1 {
+  font-size: 3.8rem;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+main h1::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 10px;
+  background: linear-gradient(to right, #ffa500, #28a199);
+  position: absolute;
+  border-radius: 4px;
+  max-height: 100%;
+}
+main p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 750px) {
+  main {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
